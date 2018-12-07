@@ -1,12 +1,11 @@
 var express = require('express'),
     router = express.Router(),
     logger = require('../../config/logger'),
-    mongoose = require('mongoose')
-HelpTicket = mongoose.model('HelpTicket');
-HelpTicketArchive = mongoose.model('HelpTicketArchive');
-HelpTicketContent = mongoose.model('HelpTicketContent');
-multer = require('multer'),
-    mkdrip = require('mkdrip'),
+    mongoose = require('mongoose'),
+    HelpTicket = mongoose.model('HelpTicket'),
+    HelpTicketContent = mongoose.model('HelpTicketContent'),
+    multer = require('multer'),
+    mkdirp = require('mkdirp'),
     asyncHandler = require('express-async-handler');
 
 module.exports = function (app, config) {
