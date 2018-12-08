@@ -92,7 +92,7 @@ module.exports = function (app, config) {
 
     router.delete('/helpTickets/:id', asyncHandler(async (req, res) => {
         logger.log('info', 'Deleting helpTicket %s', req.params.id);
-        await HelpTickets.remove({ _id: req.params.id })
+        await HelpTicket.remove({ _id: req.params.id })
             .then(result => {
                 res.status(200).json(result);
             })
@@ -133,4 +133,14 @@ module.exports = function (app, config) {
         })
     }));
 
+    router.get('/helpTicketContents/helpTicket/:id', asyncHandler(async (req, res) => {
+        logger.log('info', 'Getting a HelpTickets Content');
+        let query = HelpTicketContent.find({helpTicketId: req.params.id});
+        query
+            .sort('-dateCreated')
+            .populate({ path: 'personId', model: 'User', select: 'lastName firstName fullName' })
+        await query.exec().then(result => {
+            res.status(200).json(result);
+        })
+    }));
 };

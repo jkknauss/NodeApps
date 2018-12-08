@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "hope",
   "description": "An Aurelia client application.",
   "version": "0.1.0",
   "repository": {
@@ -11,19 +11,13 @@
     "aurelia-animator-css": "^1.0.4",
     "aurelia-auth": "^3.0.5",
     "aurelia-bootstrapper": "^2.3.0",
-    "aurelia-fetch-client": "^1.7.0",
-    "bcryptjs": "^2.4.3",
     "bluebird": "^3.5.2",
-    "jsonwebtoken": "^8.4.0",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0",
     "requirejs": "^2.3.6",
     "text": "github:requirejs/text#latest"
   },
   "peerDependencies": {},
   "devDependencies": {
-    "aurelia-cli": "^1.0.0-beta.4",
+    "aurelia-cli": "^1.0.0-beta.7",
     "aurelia-testing": "^1.0.0",
     "aurelia-tools": "^2.0.0",
     "gulp": "^4.0.0",
