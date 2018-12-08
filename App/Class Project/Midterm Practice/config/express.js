@@ -32,9 +32,10 @@ module.exports = function (app, config) {
     }));
     app.use(bodyParser.json());
 
-    app.use(express.static(config.root + '/app/public'));
+    app.use(express.static(config.root + '/app/public'));  // /app was added so that the path would be correct due to placement of folders
 
     require ('../app/models/todos.js');
+    
     require ('../app/controllers/todos.js')(app, config);
 
     app.use(function (req, res) {

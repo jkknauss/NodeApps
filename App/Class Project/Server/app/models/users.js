@@ -2,6 +2,7 @@ var Mongoose = require('mongoose');
 var Schema = Mongoose.Schema;
 var Bcrypt = require('bcryptjs');
 
+
 var userSchema = new Schema({
     firstName: { type: String, require: true },
     lastName: { type: String, require: true },
@@ -13,7 +14,7 @@ var userSchema = new Schema({
 
 });
 
-userSchema.pre('save', function (next) {
+UserSchema.pre('save', function (next) {
     var person = this;
     if (this.isModified('password') || this.isNew) {
         Bcrypt.genSalt(10, function (err, salt) {
@@ -33,7 +34,7 @@ userSchema.pre('save', function (next) {
     }
 });
 
-userSchema.methods.comparePassword = function (passw, cb) {
+UserSchema.methods.comparePassword = function (passw, cb) {
     Bcrypt.compare(passw, this.password, function (err, isMatch) {
         if (err) {
             return cb(err);
@@ -42,7 +43,7 @@ userSchema.methods.comparePassword = function (passw, cb) {
     });
 };
 
-userSchema.virtual('fullName')
+UserSchema.virtual('fullName')
 .get(function(){
     return this.firstName + '  ' + this.lastName;
 });
