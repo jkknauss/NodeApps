@@ -5,6 +5,6 @@ import { Router } from 'aurelia-router';
 
 export class Landing {
     constructor(){
-        this.message = "Landing"
+        this.message = "Landing";
     }
 }
