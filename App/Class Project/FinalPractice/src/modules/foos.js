@@ -26,12 +26,8 @@ export class Foos {
     }
     newFoo() {
         this.foo = {
-            firstName: "",
-            lastName: "",
-            active: true,
-            role: "foo",
-            email: "",
-            password: ""
+            foo: "",
+            woo: "boo",
         }
         this.openEditForm();
     }

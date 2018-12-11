@@ -1,5 +1,5 @@
 var authConfig = {
-    baseUrl: "http://localhost:5000/api",
+    baseUrl: "http://git.ucc.uwm.edu/",
     loginUrl: '/foos/login',
     tokenName: 'token',
     authHeader: 'Authorization',

@@ -1,0 +1,20 @@
+<template>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="form-group" style="margin-top:20px;">
+                    <label for="todo.priority">todo</label>
+                    <input type="text" class="form-control" value.bind="todo.todo" id="todo" placeholder="To Do">
+                </div>
+
+                <div class="form-group" style="margin-top:20px;">
+                    <label for="todo">done</label>
+                    <input type="text" class="form-control" value.bind="todo.priority" id="priority" placeholder="Priority">
+                </div>
+
+                <div class="form-group" style="margin-top:20px;">
+                    <label for="todo.done">todo</label>
+                    <input type="text" class="form-control" value.bind="todo.done" id="done" placeholder="Done">
+                </div>
+            </div>
+</template>

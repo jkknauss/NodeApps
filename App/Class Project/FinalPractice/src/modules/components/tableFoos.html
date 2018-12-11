@@ -12,24 +12,16 @@
                                 </th>
                             </tr>
                             <tr>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Role</th>
-                                <th scope="col">Active</th>
+                                <th scope="col">Foo</th>
+                                <th scope="col">Woo</th>
                             </tr>
                         </thead>
                     <tbody>
 
                         <tr repeat.for="foo of foos.foosArray">
-                            <td click.trigger="editFoo(foo)">${foo.firstName}</td>
-                            <td click.trigger="editFoo(foo)">${foo.lastName}</td>
-                            <td click.trigger="editFoo(foo)">${foo.role}</td>
-                            <td>
-                                    <div class="form-check">
-                                            <input class="form-check-input" change.delegate="changeActive(foo)" checked.bind="foo.active"
-                                            type="checkbox" value="" id="defaultCheck1">
-                                            </div>
-                            </td>
+                            <td click.trigger="editFoo(foo)">${foo.foo}</td>
+                            <td click.trigger="editFoo(foo)">${foo.woo}</td>
+                    
                         </tr>
                     </tbody>
                 </table>

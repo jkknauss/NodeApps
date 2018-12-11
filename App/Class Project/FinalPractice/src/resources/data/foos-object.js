@@ -7,7 +7,7 @@ export class Foo {
 
     constructor(data) {
         this.data = data;
-        this.FOO_SERVICE = 'foos';
+        this.FOO_SERVICE = 'foo';
     }
 
     async saveFoo(foo) {
